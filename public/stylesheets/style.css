@@ -1,0 +1,12 @@
+input {
+	margin-bottom: 10px;
+}
+
+#story {
+	height: 200px;
+	padding: 20px;
+}
+
+nav {
+	background-color: #00bfa5;
+}

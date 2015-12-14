@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Write Your Story</title>
+		<!-- jQuery -->
+		<script
+			type='text/javascript'
+			src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'>
+		</script>
+		<!-- Materialize files -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+		<!-- Javascript -->
+		<script src="javascripts/application.js"></script>
+		<!-- Socket.io file -->
+		<script src="/socket.io/socket.io.js"></script>
+		<!-- CSS -->
+		<link rel='stylesheet' href='stylesheets/style.css' />
+	</head>
+	<!-- navbar -->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo center">Write Your Story</a>
+        </div>
+    </nav>
+
+	<body>
+		<div class="container">
+			<div id="welcome-section">
+				<center>
+					<h5>Instructions</h5>
+					<p>
+						Write Your Story lets you collaboratively create a story with other online players in real-time.
+						You earn 1 point for each word you submit to the story. Try to become one of the top contributors!
+					</p>
+		            
+		            <div class="divider"></div>
+
+		          	<div class="row">
+			            <h5>Top Contributors</h5>
+			            <div class="col s12 m12 l4 offset-l4">
+				            <div id="scoreboard">
+				            <!-- To be populated with Ajax -->
+				            </div>
+				        </div>
+				    </div>
+
+					<p>There are currently <span id="numPlayers">no</span> players online.</p>
+
+					Enter your name below to start playing:
+					<div class="row">
+						<div class="input-field col s12">
+				        	<input id="username" type="text" class="validate">
+						</div>
+					</div>
+
+					<a class="waves-effect waves-light btn" id="play-now">Play now!</a>
+				</center>
+			</div>
+
+			<br>
+
+			<div id="game-section">
+				<div class="row center">
+					Welcome <span id="welcome-username"></span>!
+					<br>
+					Your score is: <span id="current-score"></span> points.
+				</div>
+
+				<div class="row">
+					<div class="col s12">
+						<center><h5>Your story goes a little like this...</h5></center>
+				    	<div class="z-depth-2" id="story">
+				    		Once upon a time,
+				    	</div>
+				    </div>
+				</div>
+
+				<div class="row">
+					<div class="input-field col s12">
+			        	<input id="word-input" type="text" class="validate">
+					</div>
+				</div>
+
+				<div class="row center">
+					<a class="waves-effect waves-light btn" id="submit-word">Add To Story</a>
+				</div>
+
+				<div class="row center">
+					<a class="waves-effect waves-light btn" id="exit">Exit Game</a>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>

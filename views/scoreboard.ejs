@@ -1,0 +1,19 @@
+<% if (obj.length) { %>
+	<table class="striped centered">
+		<thead>
+          <tr>
+              <th>Name</th>
+              <th>Points</th>
+          </tr>
+        </thead>
+
+        <tbody>
+		<% obj.forEach(function(next) { %>
+			<tr>
+			<td><%= next.username %></td>
+			<td><%= next.score %></td>
+			</tr>
+		<% }); %>
+	</table>
+	<br>
+<% } %>
